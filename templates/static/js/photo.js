@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageCanvas = document.createElement('canvas');
     const imageContext = imageCanvas.getContext('2d');
     const backgroundMusic = document.getElementById('backgroundMusic');
+    video.style.transform = "scaleX(-1)";
     
     setTimeout(function () {
         backgroundMusic.play(); // 2초 후에 음악을 재생합니다.

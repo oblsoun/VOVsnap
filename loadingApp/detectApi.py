@@ -22,6 +22,8 @@ class DetectImageFinger:
             image = self.load_and_preprocess_image(image_file_path)
             if image is None:
                 continue
+            else:
+                image = cv2.flip(image, 1)
 
             results = self.detect_hand_landmarks(image)
 
