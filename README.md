@@ -1,1 +1,1 @@
-# VOVsnap
+# :camera: 안전네컷

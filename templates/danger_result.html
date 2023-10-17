@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/danger_result.css' %}">
+    <title>Danger Result</title>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="{% static 'image/bubblevideo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- 음성 파일을 조건부로 포함 -->
+    {% if danger_image_count == 1 %}
+    <audio autoplay>
+        <source src="{% static 'tts/danger1.mp3' %}" type="audio/mpeg">
+    </audio>
+    {% elif danger_image_count == 2 %}
+        <audio autoplay>
+            <source src="{% static 'tts/danger2.mp3' %}" type="audio/mpeg">
+        </audio>
+    {% elif danger_image_count == 3 %}
+        <audio autoplay>
+            <source src="{% static 'tts/danger3.mp3' %}" type="audio/mpeg">
+        </audio>
+    {% elif danger_image_count == 4 %}
+        <audio autoplay>
+            <source src="{% static 'tts/danger4.mp3' %}" type="audio/mpeg">
+        </audio>
+    {% endif %}
+    <div class="content1">
+        <div class="container">
+            <h1>Danger Photo</h1>
+            <ul class="image-grid">
+                {% for image_url in danger_image_web_urls %}
+                    <li class="grid-item">
+                        <img src="{{ image_url }}" alt="Danger Image">
+                    </li>
+                {% endfor %}
+            </ul>
+            <h1>Safe Photo</h1>
+            <ul class="image-grid">
+                {% if safe_image_web_urls %}
+                    {% for image_url in safe_image_web_urls %}
+                        <li class="grid-item">
+                            <img src="{{ image_url }}" alt="Safe Image">
+                        </li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="result">
+            <img src="{% static 'image/evilface.png' %}" alt="이모지" class="emo">
+            <img src="{% static 'image/danger_notice.png' %}" alt="문구" class="notice">
+        </div>
+        
+        <div class="email">
+            {% csrf_token %}
+            <div class="email_notice">
+                <div class="circle"></div>
+                <p>위험한 사진이 감지되었습니다. 주의해주세요.</p>
+            </div>
+            <input type="email" id="email" placeholder="example@example.com">
+            <button type="button" class="email-button" id="email-button" onclick="sendVerificationCode()">전송</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/result.js' %}"></script>
+</body>
+</html>

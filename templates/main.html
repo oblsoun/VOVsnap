@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>VOV_main</title>
+</head>
+<link rel="short icon" href="#">
+<body>
+    <div class="background">
+        <!-- Your GIF content goes here -->
+        <button class="start-button"><a href="{% url 'pictureApp:picture' %}"><span>START</span></a></button>
+    </div>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="{% static 'tts/main1.mp3' %}" type="audio/mpeg">
+    </audio>
+</body>
+</html>

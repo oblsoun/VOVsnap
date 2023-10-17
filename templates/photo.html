@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/photo.css' %}">
+    <title>VOV_photo</title>
+</head>
+<link rel="short icon" href="#">
+<body>
+    <div class="background">
+        <div class="photo-container">
+            <video id="webcam" autoplay playsinline></video>
+            <div id="flash"></div>
+        </div>
+        <canvas id="imageCanvas" style="display: none;"></canvas>
+        <audio id="backgroundMusic" loop>
+            <source src="{% static 'tts/photo.mp3' %}" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/photo.js' %}"></script>
+</body>
+</html>

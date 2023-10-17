@@ -1,0 +1,15 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    background: url('../image/loading.gif') center/cover no-repeat;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}

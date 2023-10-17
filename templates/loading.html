@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+    <title>VOV_loading</title>
+</head>
+<link rel="short icon" href="#">
+<body>
+    <div class="background"></div>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="{% static 'tts/loading.mp3' %}" type="audio/mpeg">
+    </audio>
+    <div id="loading-spinner" style="display: none;"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+</body>
+</html>

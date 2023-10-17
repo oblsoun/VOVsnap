@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    background: url('../image/main.gif') center/cover no-repeat;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Your-Desired-Font';
+    src: url('font/DNFBitBitOTF.otf') format('opentype'); /* 경로를 실제 파일 위치로 변경해야 함 */
+}
+
+@keyframes textAnimation {
+    0%, 100% {
+        font-size: 100px; /* 시작과 끝 지점의 글씨 크기 */
+    }
+    50% {
+        font-size: 120px; /* 중간 지점에서의 글씨 크기 */
+    }
+}
+
+.start-button {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    padding: 80px;
+    cursor: pointer;
+    outline: none;
+}
+
+.start-button span {
+    font-family: 'Your-Desired-Font', sans-serif;
+    font-size: 140px;
+    color: white;
+    position: relative;
+    animation: textAnimation 0.55s infinite alternate;
+}
