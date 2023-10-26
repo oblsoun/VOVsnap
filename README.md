@@ -1,5 +1,7 @@
 # :camera: 안전네컷
 
+[![시연영상]([http://img.youtube.com/vi/QYNwbZHmh8g/0.jpg)](https://youtu.be/QYNwbZHmh8g?t=0s](https://youtu.be/UCxkyX-NQD4))
+
 - - -
 
 ## :mag_right: 개요
