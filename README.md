@@ -23,12 +23,13 @@
 - 개발 기간: 2023. 10. ~ 2023. 10.
 - 개발 인원: 2
 - 개발 언어: Python
-- Dataset: Roboflow
+- Dataset: [Roboflow](https://universe.roboflow.com/fingerprint-nze3i/vov-k9idv)
 - Model: Yolov5m
 - Framework: Django
 - IDE: Visual Studio Code
 - Library: OpenCV, Mediapipe, Numpy, PIL
 - ETC: SMTP, JQuery
+- [시연 영상](https://youtu.be/UCxkyX-NQD4)
 
 - - - 
 
