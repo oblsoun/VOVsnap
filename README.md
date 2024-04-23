@@ -4,7 +4,9 @@
 
 - - -
 
-## :mag_right: 개요
+## 목차
+
+- 프로젝트 개요
 
 - 프로젝트 목적
 
@@ -15,6 +17,20 @@
 - 기타 링크
 
 - - -
+
+### :mag_right: 프로젝트 개요
+
+- 개발 기간: 2023. 10. ~ 2023. 10.
+- 개발 인원: 2
+- 개발 언어: Python
+- Dataset: Roboflow
+- Model: Yolov5m
+- Framework: Django
+- IDE: Visual Studio Code
+- Library: OpenCV, Mediapipe, Numpy, PIL
+- ETC: SMTP, JQuery
+
+- - - 
 
 ### :pushpin: 프로젝트 목적
 
